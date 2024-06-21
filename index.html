@@ -62,7 +62,10 @@
               <td>${index}</td>
               <td>${category.parentSlug}</td>
               <td>${category.title}</td>
-              <td>${category.percentage} (${category.outOfStockItemsCount}/${category.totalItemsCount})</td>`
+              <td>
+                ${category.percentage === -1 ? '-' : category.percentage} 
+                (${category.outOfStockItemsCount}/${category.totalItemsCount})
+              </td>`
             tableBody.appendChild(row)
             index++
           }
